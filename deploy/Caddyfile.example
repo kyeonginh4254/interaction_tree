@@ -1,0 +1,4 @@
+# Replace service.example.com with the approved hostname before installing.
+service.example.com {
+    reverse_proxy 127.0.0.1:8000
+}

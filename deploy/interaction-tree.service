@@ -1,0 +1,23 @@
+[Unit]
+Description=Interaction Tree FastAPI
+After=network.target
+
+[Service]
+Type=simple
+User=interaction-tree
+Group=interaction-tree
+WorkingDirectory=/opt/interaction-tree
+ExecStart=/opt/interaction-tree/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --proxy-headers --forwarded-allow-ips=127.0.0.1
+Restart=on-failure
+RestartSec=3
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
