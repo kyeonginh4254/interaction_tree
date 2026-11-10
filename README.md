@@ -1,6 +1,6 @@
 # Interaction Tree
 
-Task 0: minimal FastAPI deployment on Ubuntu OCI. No payment, QR, or database implementation.
+Task 0: minimal FastAPI deployment on Oracle Linux OCI. No payment, QR, or database implementation.
 
 ## Local run
 
@@ -45,4 +45,4 @@ curl --fail http://127.0.0.1:8000/health
 git rev-parse HEAD
 ```
 
-Cloud deployment and HTTPS are pending; no public address has been assigned yet.
+Actual hostname settings belong in the ignored `.private/Caddyfile` or `deploy/Caddyfile`. Keep the tracked `deploy/Caddyfile.example` generic. The server uses `/etc/caddy/Caddyfile`.
