@@ -7,3 +7,6 @@ __pycache__/
 *.pem
 *.key
 .DS_Store
+
+# Local deployment credentials
+.private/
